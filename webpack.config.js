@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
+console.log(isDev, process.env.NODE_ENV);
 
 module.exports = {
   entry: {
@@ -154,7 +155,7 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin({
       tslint: undefined,
-      async: false,
+      async: isDev,
       silent: false,
       formatter: "codeframe",
       useTypescriptIncrementalApi: true,

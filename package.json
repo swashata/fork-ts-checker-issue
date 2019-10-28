@@ -5,7 +5,9 @@
   "author": "Swashata Ghosh <swashata@wpquark.com>",
   "license": "MIT",
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "start": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -14,6 +16,7 @@
     "@webpack-cli/serve": "^0.1.8",
     "autoprefixer": "^9.7.0",
     "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "less": "^3.10.3",
